@@ -1,0 +1,53 @@
+<single-spa-router>
+
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <main>
+
+    <application name="@yawi/app-layer"></application>
+
+    <div class="flex">
+
+      <nav>
+        <application name="@yawi/app-menu"></application>
+      </nav>
+
+      <div>
+        
+        <route path="home">
+          <div>
+            Bienvenido a la aplicación de microfrontends
+          </div>
+        </route>
+        
+        <route path="todo">
+          <application name="@yawi/app-todo"></application>
+        </route>
+        
+        <route path="counter">
+          <application name="@yawi/app-counter"></application>
+        </route>
+
+      </div>
+
+    </div>
+
+
+  </main>
+</single-spa-router>
